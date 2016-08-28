@@ -1,0 +1,130 @@
+1. &$var - deyishenin deyerini yox, unvanini teyin edir
+==========================
+2. <?php 
+	$anything = 'me';
+	$$anything = 4;
+	echo $me; // ekrana 4 yazisi chixaracaq. $$anything - $anythingda olan string deyerini deyishene chevirir
+?>
+==========================
+3. True ve ya False
+==========================
+4. serialize - arraylari stringe chevirmek uchun istifade olunur ve arraydaki elementlerin uzunlugunu da ekrana chixarir. 
+   niye serialize istifade etmeliyik? - ekranin mueyyen hissesinde daha az yer tutur.
+   unserialize etmekle biz stringe chevirdiyimiz array-i yeniden array ede bilerik 
+==========================
+5.
+
+==========================
+6. <?php 
+    $juice ="He drank some apple juice."
+    echo $juice;
+ 	?>
+==========================
+7. unset() - deyishenler uzerinde istifade olunur, ve deyisheni tanimlanmamish edir.
+   unlink() - fayllari silmek uchun istifade olunur.
+==========================
+8.
+==========================
+9.
+==========================
+10.
+==========================
+11.
+==========================
+12. 7
+==========================
+13.
+==========================
+14.
+==========================
+15.
+==========================
+16. traitler sinifleri genishletmek uchun istifade olunur, sinifle eyni xususiyyete malikdiler tek ferqleri traitler tek bashina ishletmek olmur. examp:
+<?php 
+	 trait my_trait{
+    	public $name;
+    	public function yaz(){
+    		echo $this->name;
+    	}
+    }
+    class my_class{
+    	use my_trait;
+    }
+
+    $new_user = new my_class();
+    $new_user -> name = 'Memo';
+    $new_user -> yaz();
+?>
+==========================
+17. class data_base{
+		private $connection;
+		private $host;
+		private $username;
+		private $password;
+		private $database;
+
+		private function __construct(){
+			$this -> connection = new sql($this->host, $this->username, $this->password, $this->database);
+		} 
+	}
+==========================
+18.
+==========================
+19. <?php 
+		$a = 45;
+		$b = 12;
+		echo $a + $b;
+ 	?>
+==========================
+20. _sleep() - 
+	_wakeup() - 
+==========================
+21.
+==========================
+22. $GLOBALS - local deyishenleri class xaricinde deyishmek isteyende istifade olunur. examp:
+$GLOBALS['variable'];
+==========================
+23.
+==========================
+24. <?php 
+	
+	$my_pic = $_FILES['file']['name'];
+	$info = pathinfo($my_pic, PATHINFO_EXTENSION);
+
+	if($info == "jpg" || $info == "png" || $info == "gif"){
+		echo $info;	
+	}else{
+		echo "CHOOSE A JPG, PNG or GIF FILE PLEASE!!!";
+	}
+
+?>
+==========================
+25. "." - sadece noqte birleshdirme rolunu oynayir;
+	".=" - ilk onceden qeyd etdiyimiz deyishene daha sonradan "." vasitesi ile nese elave etmek istesek qisa yazmaq uchun istifade olunur, bir novu JS-de a=a+1 evezine a+=1 yazmaq kimidir. examp:
+	$a = 5;
+	$a .= "bir integerdir";
+	ekrana 5 bir integerdir yazisi chixacaq
+==========================
+26. sheklin height ve width-ini getimagesize() metodu vasitesi ile goturmek olar 
+==========================
+27.	E_ALL - butun errorlari ve warningleri gosterir
+	E_RECOVERABLE_ERROR - tehlukeli errorlari gosterir
+	E_STRICT - ishleme vaxti bildirishi
+	E_USER_NOTICE - user terefinden bildirish mesaji
+	E_USER_WARNING - user terefinden tehluke mesaji
+	E_USER_ERROR - user terefinden error mesaji
+	E_COMPILE_ERROR - kompayl vaxti script ile gosterilen error
+	E_CORE_WARNING - php ilkin bashlayanda ortaya chixan tehlukedi
+	E_CORE_ERROR - php ilkin install olanda ortaya chixan errordu
+	E_NOTICE - ishleme zamani kod'da olan sehve gore ortaya chixan error
+	E_PARSE - sintaksis erroru
+	E_WARNING, E_ERROR;
+==========================
+28. _PHP_SELF - form taglarinin arasinda locate etmek uchun istifade olunur, bir novu action: user.php kimi, examp :
+echo $_SERVER['PHP_SELF'];
+==========================
+29.
+==========================
+30. Php-de maili mail() funksiyasi vasitesi ile gondermek olur examp:
+mail("memmed_memmedli@hotmail.com","subject","hey");
+==========================
